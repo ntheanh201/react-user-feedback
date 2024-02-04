@@ -19,6 +19,7 @@ coverage
 
 # ide
 .idea
+.vscode
 
 # parcel
 .parcel-cache
