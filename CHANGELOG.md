@@ -1,7 +1,1 @@
-# @boilertown/react-ui-boilerplate
-
-## 0.0.1
-
-### Patch Changes
-
-- 93e5422: First release ever!
+# @ntheanh201/react-user-feedback

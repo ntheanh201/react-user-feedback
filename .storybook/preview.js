@@ -1,4 +1,6 @@
+import '!style-loader!css-loader!postcss-loader!tailwindcss/tailwind.css';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import '../src/global.css';
 
 export const parameters = {
 	actions: { argTypesRegex: '^on[A-Z].*' },
@@ -13,7 +15,7 @@ export const parameters = {
 	},
 	options: {
 		storySort: {
-			order: ['Overview', 'Components'],
+			order: ['Overview', 'Components', 'UI'],
 		},
 	},
 };

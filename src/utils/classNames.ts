@@ -1,9 +1,6 @@
-/**
- * Conditionally joining classNames together.
- *
- * @param names list names that need to be concat.
- * @returns a concat classNames string.
- */
-export const classNames = (...names: (string | undefined)[]): string => {
-	return names.filter((name) => !!name).join(' ');
-};
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+export function cn(...inputs: ClassValue[]) {
+	return twMerge(clsx(inputs));
+}

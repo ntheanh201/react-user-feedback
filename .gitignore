@@ -16,3 +16,6 @@ yarn-error.log*
 .turbo
 
 coverage
+
+# parcel
+.parcel-cache
