@@ -33,6 +33,7 @@
 
 ```typescript
 import UserFeedback from '@ntheanh201/react-user-feedback';
+import '@ntheanh201/react-user-feedback/dist/styles.css';
 
 <UserFeedback
 	disabled={false}

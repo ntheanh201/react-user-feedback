@@ -1,6 +1,6 @@
 {
 	"name": "@ntheanh201/react-user-feedback",
-	"version": "0.0.1",
+	"version": "0.0.7",
 	"description": "Collect user's feedback",
 	"repository": {
 		"type": "git",
@@ -8,8 +8,14 @@
 	},
 	"sideEffects": false,
 	"exports": {
-		"import": "./dist/esm/index.js",
-		"require": "./dist/cjs/index.js"
+		".": {
+			"import": "./dist/esm/index.js",
+			"require": "./dist/cjs/index.js"
+		},
+		"./dist/styles.css": {
+			"import": "./dist/styles.css",
+			"require": "./dist/styles.css"
+		}
 	},
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
@@ -18,7 +24,7 @@
 		"dist"
 	],
 	"scripts": {
-		"build": "NODE_ENV=production rollup -c",
+		"build": "NODE_ENV=production rollup -c && npm run build-css",
 		"build:storybook": "storybook build",
 		"lint": "eslint . --ext .ts,.tsx,.js,.jsx",
 		"prepare": "husky install",
@@ -28,7 +34,8 @@
 		"test:watch": "NODE_ENV=test jest --watch",
 		"changeset": "changeset",
 		"release": "changeset publish",
-		"start": "NODE_ENV=development parcel --no-cache demo/index.html"
+		"start": "NODE_ENV=development parcel --no-cache demo/index.html",
+		"build-css": "tailwindcss build src/global.css -o dist/styles.css"
 	},
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx}": [
@@ -50,7 +57,10 @@
 		"@babel/runtime": "^7.20.7",
 		"@hookform/resolvers": "^3.3.4",
 		"@radix-ui/react-label": "^2.0.2",
-		"@radix-ui/react-slot": "^1.0.2"
+		"@radix-ui/react-slot": "^1.0.2",
+		"lucide-react": "^0.321.0",
+		"react-hook-form": "^7.50.0",
+		"zod": "^3.22.4"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.20.12",
@@ -104,7 +114,6 @@
 		"jest-environment-jsdom": "^29.3.1",
 		"jest-transform-stub": "^2.0.0",
 		"lint-staged": "^13.1.0",
-		"lucide-react": "^0.321.0",
 		"parcel": "^2.11.0",
 		"postcss": "^8.4.33",
 		"postcss-custom-properties": "^13.3.4",
@@ -115,7 +124,6 @@
 		"process": "^0.11.10",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"react-hook-form": "^7.50.0",
 		"rollup": "^2.79.1",
 		"rollup-plugin-delete": "^2.0.0",
 		"rollup-plugin-peer-deps-external": "^2.2.4",
@@ -131,8 +139,7 @@
 		"typescript": "^4.9.4",
 		"typescript-transform-paths": "^3.4.6",
 		"webpack": "^5.75.0",
-		"webpack-cli": "^5.0.1",
-		"zod": "^3.22.4"
+		"webpack-cli": "^5.0.1"
 	},
 	"peerDependencies": {
 		"react": "^16.8.0 || ^17 || ^18",
