@@ -17,5 +17,8 @@ yarn-error.log*
 
 coverage
 
+# ide
+.idea
+
 # parcel
 .parcel-cache

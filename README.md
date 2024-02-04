@@ -2,10 +2,14 @@
 
 <div align="center">
   <p>
-    Collect user's feedback
+    Collect user's feedback for React using TailwindCSS, shadcn/ui, Storybook, Parcel, Rollup
   </p>
   <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT license" >
 </div>
+
+<p align="center">
+  <img src="./img.png">
+</p>
 
 ## The Setup
 
@@ -21,13 +25,40 @@
 
 ## Getting Started
 
-- Install with `yarn` or `npm` or `pnpm`:
+### Install with `yarn` or `npm` or `pnpm`:
 
-  `pnpm add @ntheanh201/react-user-feedback`
+`pnpm add @ntheanh201/react-user-feedback`
 
-## Features
+### Usage
 
-## Running Locally
+```typescript
+import UserFeedback from '@ntheanh201/react-user-feedback';
+
+<UserFeedback
+	disabled={false}
+	allowImage={true}
+	feedbackTypes={[
+		{ value: 'general', label: 'General' },
+		{ value: 'bug', label: 'Bug' },
+		{ value: 'idea', label: 'Idea' },
+	]}
+	onSubmit={(values, onError) => {
+		console.log('values: ', values);
+	}}
+/>;
+```
+
+## Props
+
+| prop          | description                                    | type                | required? | default                                                                                                 |
+| ------------- | ---------------------------------------------- | ------------------- | --------- | ------------------------------------------------------------------------------------------------------- |
+| disabled      | Hide user's feedback                           | boolean             | no        | false                                                                                                   |
+| allowImage    | Allow upload image                             | boolean             | no        | false                                                                                                   |
+| feedbackTypes | Custom feedback types                          | array<label, value> | no        | [{ value: 'general', label:'General' },{ value: 'bug', label: 'Bug' },{ value: 'idea', label: 'Idea' }] |
+| timeout       | Set timeout for the button's label when submit | number              | no        | 3000                                                                                                    |
+| onSubmit      | Submit function                                | function            | yes       |
+
+## Contributing
 
 To run this module locally:
 

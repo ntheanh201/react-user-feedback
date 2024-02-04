@@ -1,1 +1,1 @@
-export * from './components/user-feedback';
+export { default } from './components/user-feedback';
