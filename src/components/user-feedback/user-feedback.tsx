@@ -11,7 +11,6 @@ import {
 	FormControl,
 	FormField,
 	FormItem,
-	FormLabel,
 	FormMessage,
 } from '@src/components/ui/form';
 import { Input } from '@src/components/ui/input';
@@ -168,12 +167,12 @@ const UserFeedback: FC<IProps> = (props) => {
 	const RenderImage = () => {
 		return (
 			<FormItem className="mb-3	relative">
-				<FormLabel>Attach Image</FormLabel>
+				<Label className="text-black">Attach Image</Label>
 				{image?.preview ? (
 					RenderPreview()
 				) : (
 					<Input
-						className="bg-background"
+						className="bg-background text-black"
 						type="file"
 						id="imageUpload"
 						accept="image/*"
@@ -261,10 +260,10 @@ const UserFeedback: FC<IProps> = (props) => {
 								name="email"
 								key="email"
 								render={({ field }) => (
-									<FormItem className="mb-3	relative">
-										<Label>Email</Label>
+									<FormItem className="mb-3 relative">
+										<Label className="text-black">Email</Label>
 										<FormControl>
-											<Input {...field} />
+											<Input className="text-black" {...field} />
 										</FormControl>
 										<FormMessage />
 									</FormItem>
@@ -272,13 +271,13 @@ const UserFeedback: FC<IProps> = (props) => {
 							/>
 
 							<FormItem className="mb-3 relative">
-								<Label>Feedback Type</Label>
+								<Label className="text-black">Feedback Type</Label>
 								<ul className="flex list-none p-0 m-0 mb-[0.85em]">
 									{feedbackTypes?.map((item) => (
 										<li
 											key={item.value}
 											className={cn(
-												'w-full bg-background select-none text-center p-3 text-[13px] cursor-pointer whitespace-nowrap overflow-hidden truncate first-of-type:rounded-l-md first-of-type:-mr-[1px] last-of-type:rounded-r-md last-of-type:-ml-[1px] border border-[#d0d8e1]',
+												'text-black w-full bg-background select-none text-center p-3 text-[13px] cursor-pointer whitespace-nowrap overflow-hidden truncate first-of-type:rounded-l-md first-of-type:-mr-[1px] last-of-type:rounded-r-md last-of-type:-ml-[1px] border border-[#d0d8e1]',
 												type === item.value &&
 													'bg-primary text-white border-primary',
 											)}
@@ -298,12 +297,12 @@ const UserFeedback: FC<IProps> = (props) => {
 								key="message"
 								render={({ field }) => (
 									<FormItem className="mb-3	relative">
-										<Label>Feedback Message</Label>
+										<Label className="text-black">Feedback Message</Label>
 										<FormControl>
 											<Textarea
 												id="message"
 												placeholder="Enter your feedback!"
-												className="resize-none"
+												className="resize-none text-black"
 												{...field}
 											/>
 										</FormControl>
