@@ -9,15 +9,15 @@
 
 ## The Setup
 
-- [React v18][https://react.dev/]
-- [TypeScript][https://www.typescriptlang.org/]
-- Style: [Tailwind CSS][https://tailwindcss.com/]
-- UI library: [shadcn/ui][https://ui.shadcn.com/]
-- UI development with [Storybook][storybook-url](https://storybook.js.org/)]
-- Linting with [ESLint][https://eslint.org/] and code formatting with [Prettier][https://prettier.io/]
-- Conventional commit messages with [Commitlint][https://commitlint.js.org/]
-- Build the library with [Rollup][https://rollupjs.org/]
-- Automated release with [changesets][https://github.com/changesets/changesets]
+- [React v18](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- Style: [Tailwind CSS](https://tailwindcss.com/)
+- UI library: [shadcn/ui](https://ui.shadcn.com/)
+- UI development with [Storybook](https://storybook.js.org/)
+- Linting with [ESLint](https://eslint.org/) and code formatting with [Prettier](https://prettier.io/)
+- Conventional commit messages with [Commitlint](https://commitlint.js.org/)
+- Build the library with [Rollup](https://rollupjs.org/)
+- Automated release with [changesets](https://github.com/changesets/changesets/)
 
 ## Getting Started
 
@@ -49,6 +49,6 @@ To run this module locally:
 
   `pnpm storybook`
 
-This will bundle the client with `parcel` and listening on [http://localhost:1234][http://localhost:1234]
+This will bundle the client with `parcel` and listening on [http://localhost:1234](http://localhost:1234)
 
-Open [http://localhost:1234][http://localhost:1234] to view the demo
+Open [http://localhost:1234](http://localhost:1234) to view the demo
